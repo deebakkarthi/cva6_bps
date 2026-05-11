@@ -1,0 +1,581 @@
+// ----------------------------------------
+// Jasper Version Info
+// tool      : Jasper 2026.03
+// platform  : Linux 4.18.0-553.123.1.el8_10.x86_64
+// version   : 2026.03 FCS 64 bits
+// build date: 2026.03.26 12:48:29 UTC
+// ----------------------------------------
+// started   : 2026-05-10 20:42:03 EDT
+// created   : 2026-05-10 20:56:21 EDT
+// hostname  : node1-s.ece.Virginia.EDU.UVAECE
+// pid       : 3550387
+// arguments : '-label' 'session_0' '-console' '//127.0.0.1:46857' '-style' 'windows' '-data' 'AAABDXicVY5NCsIwEIW/CIK48BDu6x/WVS+huC+lFLGIDW0Ed3pUbxJfUn/oJDNv5s2bSQATL9nDe0808+qRzDC0UI+GzP45QBj/myGdkXClIefEjbOYiRhHyUX5nIq7vFTPCXM6YSFtxeKnmmrC0mpLreqgWEhnpWk10cRZG2PHkg0r+U4xZa14jMz2wyc6tfZ/94W3Xf/dN3gqIWI=' '-bridge_url' '10.230.53.157:35181' '-proj' '/net/marysrock.ece.Virginia.EDU/maryisan/users/brg8ve/cva6_verif/jasper_outputs/20260510T204202--jgproject/sessionLogs/session_0' '-init' '-hidden' '/net/marysrock.ece.Virginia.EDU/maryisan/users/brg8ve/cva6_verif/jasper_outputs/20260510T204202--jgproject/.tmp/.initCmds.tcl' 'execute_stage.tcl'
+// ----------------------------------------
+//
+// Any disclosure about the Cadence Design Systems software or its use
+// model to any third party violates the written Non-Disclosure Agreement
+// between Cadence Design Systems, Inc. and the customer.
+//
+// THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+// CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+// PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+// DESIGN SYSTEMS, INC.
+//
+// Copyright (C) 2000-2026 Cadence Design Systems, Inc. All Rights
+// Reserved.  Unpublished -- rights reserved under the copyright laws of
+// the United States.
+//
+// This product includes software developed by others and redistributed
+// according to license agreement. See doc/third_party_readme.txt for
+// further details.
+//
+// RESTRICTED RIGHTS LEGEND
+//
+// Use, duplication, or disclosure by the Government is subject to
+// restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+// Technical Data and Computer Software clause at DFARS 252.227-7013 or
+// subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+// Rights at 48 CFR 52.227-19, as applicable.
+//
+//
+//                           Cadence Design Systems, Inc.
+//                           2655 Seely Avenue
+//                           San Jose, CA 95134
+//                           Phone: 408.943.1234
+//
+// For technical assistance visit http://support.cadence.com.
+
+//------------------------------------------
+// bps_sva_1: 
+//------------------------------------------
+module bps_sva_1 (
+    input wire clk_i,
+    input wire ex_stage_i__alu_valid_i,
+    input wire ex_stage_i__branch_valid_i,
+    input wire ex_stage_i__csr_buffer_i__csr_reg_q__valid,
+    input wire ex_stage_i__csr_commit_i,
+    input wire ex_stage_i__csr_valid_i,
+    input wire ex_stage_i__dcache_req_ports_i_1___data_gnt,
+    input wire ex_stage_i__dcache_req_ports_i_1___data_rvalid,
+    input wire ex_stage_i__dcache_req_ports_i_2___data_gnt,
+    input wire ex_stage_i__dcache_wbuffer_empty_i,
+    input wire ex_stage_i__debug_mode_i,
+    input wire ex_stage_i__flu_ready_o,
+    input wire ex_stage_i__flu_valid_o,
+    input wire ex_stage_i__flush_i,
+    input wire ex_stage_i__fpu_valid_i,
+    input wire ex_stage_i__fpu_valid_o,
+    input wire ex_stage_i__i_mult__i_div__div_res_zero_q,
+    input wire ex_stage_i__i_mult__i_div__rem_sel_q,
+    input wire ex_stage_i__i_mult__i_div__state_q_0_,
+    input wire ex_stage_i__i_mult__i_multiplier__mult_valid_o,
+    input wire ex_stage_i__i_mult__mul_valid,
+    input wire ex_stage_i__i_mult__word_op_q,
+    input wire ex_stage_i__icache_areq_i__fetch_req,
+    input wire ex_stage_i__is_compressed_instr_i,
+    input wire ex_stage_i__load_valid_o,
+    input wire ex_stage_i__lsu_commit_i,
+    input wire ex_stage_i__lsu_commit_ready_o,
+    input wire ex_stage_i__lsu_i__i_store_unit__state_q_0_,
+    input wire ex_stage_i__lsu_i__i_store_unit__state_q_1_,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_,
+    input wire ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_,
+    input wire ex_stage_i__lsu_i__lsu_bypass_i__mem_q_0___valid,
+    input wire ex_stage_i__lsu_i__lsu_bypass_i__mem_q_1___valid,
+    input wire ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q,
+    input wire ex_stage_i__lsu_i__lsu_bypass_i__status_cnt_q_1_,
+    input wire ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q,
+    input wire ex_stage_i__lsu_ready_o,
+    input wire ex_stage_i__lsu_valid_i,
+    input wire ex_stage_i__mult_valid_i,
+    input wire ex_stage_i__no_st_pending_o,
+    input wire ex_stage_i__resolve_branch_o,
+    input wire ex_stage_i__resolved_branch_o__is_mispredict,
+    input wire ex_stage_i__resolved_branch_o__is_taken,
+    input wire ex_stage_i__store_valid_o
+);
+
+
+  default clocking def_clk @(posedge clk_i);
+  endclocking
+
+
+  //ex_stage_i.alu_valid_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_1 : assert property ((ex_stage_i__alu_valid_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.branch_valid_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_2 : assert property ((ex_stage_i__branch_valid_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.branch_valid_i |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_3 : assert property ((ex_stage_i__branch_valid_i |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.csr_valid_i |=> ex_stage_i.csr_buffer_i.csr_reg_q.valid
+    user_defined_poi_1_prop_4 : assert property ((ex_stage_i__csr_valid_i |=> ex_stage_i__csr_buffer_i__csr_reg_q__valid));
+  //ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_5 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_gnt |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_6 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_gnt |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_7 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_rvalid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_8 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_rvalid |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_9 : assert property ((ex_stage_i__dcache_req_ports_i_2___data_gnt |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.dcache_wbuffer_empty_i |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_10 : assert property ((ex_stage_i__dcache_wbuffer_empty_i |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.debug_mode_i |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_11 : assert property ((ex_stage_i__debug_mode_i |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.debug_mode_i |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_12 : assert property ((ex_stage_i__debug_mode_i |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.flush_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_13 : assert property ((ex_stage_i__flush_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.flush_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_14 : assert property ((ex_stage_i__flush_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.flush_i |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_15 : assert property ((ex_stage_i__flush_i |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.flush_i |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_16 : assert property ((ex_stage_i__flush_i |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.flush_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_17 : assert property ((ex_stage_i__flush_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.fpu_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_18 : assert property ((ex_stage_i__fpu_valid_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.fpu_valid_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_19 : assert property ((ex_stage_i__fpu_valid_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.fpu_valid_i |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_20 : assert property ((ex_stage_i__fpu_valid_i |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.fpu_valid_i |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_21 : assert property ((ex_stage_i__fpu_valid_i |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.fpu_valid_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_22 : assert property ((ex_stage_i__fpu_valid_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.fpu_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_23 : assert property ((ex_stage_i__fpu_valid_o |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.fpu_valid_o |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_24 : assert property ((ex_stage_i__fpu_valid_o |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.fpu_valid_o |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_25 : assert property ((ex_stage_i__fpu_valid_o |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.fpu_valid_o |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_26 : assert property ((ex_stage_i__fpu_valid_o |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.fpu_valid_o |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_27 : assert property ((ex_stage_i__fpu_valid_o |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.i_mult.i_div.div_res_zero_q |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_28 : assert property ((ex_stage_i__i_mult__i_div__div_res_zero_q |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.i_mult.i_div.div_res_zero_q |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_29 : assert property ((ex_stage_i__i_mult__i_div__div_res_zero_q |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.i_mult.i_div.rem_sel_q |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_30 : assert property ((ex_stage_i__i_mult__i_div__rem_sel_q |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.i_mult.i_div.rem_sel_q |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_31 : assert property ((ex_stage_i__i_mult__i_div__rem_sel_q |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_32 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_33 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_34 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_35 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_36 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q
+    user_defined_poi_1_prop_37 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q
+    user_defined_poi_1_prop_38 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_39 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_40 : assert property ((ex_stage_i__i_mult__i_div__state_q_0_ |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_41 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_42 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_43 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_44 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.i_mult.word_op_q
+    user_defined_poi_1_prop_45 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__i_mult__word_op_q));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.is_compressed_instr_i
+    user_defined_poi_1_prop_46 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__is_compressed_instr_i));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_47 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_48 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_49 : assert property ((ex_stage_i__i_mult__i_multiplier__mult_valid_o |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_50 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_51 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_52 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_53 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.i_mult.word_op_q
+    user_defined_poi_1_prop_54 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__i_mult__word_op_q));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.is_compressed_instr_i
+    user_defined_poi_1_prop_55 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__is_compressed_instr_i));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_56 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_57 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.i_mult.mul_valid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_58 : assert property ((ex_stage_i__i_mult__mul_valid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.i_mult.word_op_q |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_59 : assert property ((ex_stage_i__i_mult__word_op_q |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.i_mult.word_op_q |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_60 : assert property ((ex_stage_i__i_mult__word_op_q |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.i_mult.word_op_q |=> ex_stage_i.i_mult.word_op_q
+    user_defined_poi_1_prop_61 : assert property ((ex_stage_i__i_mult__word_op_q |=> ex_stage_i__i_mult__word_op_q));
+  //ex_stage_i.load_valid_o |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_62 : assert property ((ex_stage_i__load_valid_o |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.load_valid_o |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_63 : assert property ((ex_stage_i__load_valid_o |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_64 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_65 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.i_mult.word_op_q
+    user_defined_poi_1_prop_66 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__i_mult__word_op_q));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid
+    user_defined_poi_1_prop_67 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.mem_q[0].valid
+    user_defined_poi_1_prop_68 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__lsu_i__lsu_bypass_i__mem_q_0___valid));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.mem_q[1].valid
+    user_defined_poi_1_prop_69 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__lsu_i__lsu_bypass_i__mem_q_1___valid));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q
+    user_defined_poi_1_prop_70 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.status_cnt_q[1]
+    user_defined_poi_1_prop_71 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__lsu_i__lsu_bypass_i__status_cnt_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q
+    user_defined_poi_1_prop_72 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_1_ |=> ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_73 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.flu_valid_o
+    user_defined_poi_1_prop_74 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__flu_valid_o));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.i_mult.i_div.div_res_zero_q
+    user_defined_poi_1_prop_75 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__i_mult__i_div__div_res_zero_q));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.i_mult.i_div.rem_sel_q
+    user_defined_poi_1_prop_76 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__i_mult__i_div__rem_sel_q));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_77 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.lsu_ready_o
+    user_defined_poi_1_prop_78 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__lsu_ready_o));
+  //ex_stage_i.mult_valid_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_79 : assert property ((ex_stage_i__mult_valid_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.no_st_pending_o |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_80 : assert property ((ex_stage_i__no_st_pending_o |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.resolve_branch_o |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_81 : assert property ((ex_stage_i__resolve_branch_o |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.resolve_branch_o |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_82 : assert property ((ex_stage_i__resolve_branch_o |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_83 : assert property ((ex_stage_i__resolved_branch_o__is_mispredict |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_84 : assert property ((ex_stage_i__resolved_branch_o__is_mispredict |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_85 : assert property ((ex_stage_i__resolved_branch_o__is_mispredict |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_86 : assert property ((ex_stage_i__resolved_branch_o__is_taken |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.lsu_commit_ready_o
+    user_defined_poi_1_prop_87 : assert property ((ex_stage_i__resolved_branch_o__is_taken |=> ex_stage_i__lsu_commit_ready_o));
+  //ex_stage_i.alu_valid_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_88 : assert property ((ex_stage_i__alu_valid_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.branch_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_89 : assert property ((ex_stage_i__branch_valid_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.branch_valid_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_90 : assert property ((ex_stage_i__branch_valid_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.csr_buffer_i.csr_reg_q.valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_91 : assert property ((ex_stage_i__csr_buffer_i__csr_reg_q__valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.csr_buffer_i.csr_reg_q.valid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_92 : assert property ((ex_stage_i__csr_buffer_i__csr_reg_q__valid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.csr_commit_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_93 : assert property ((ex_stage_i__csr_commit_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.csr_commit_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_94 : assert property ((ex_stage_i__csr_commit_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.csr_valid_i |=> ex_stage_i.csr_commit_i
+    user_defined_poi_1_prop_95 : assert property ((ex_stage_i__csr_valid_i |=> ex_stage_i__csr_commit_i));
+  //ex_stage_i.csr_valid_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_96 : assert property ((ex_stage_i__csr_valid_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_97 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_gnt |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_98 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_gnt |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_99 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_gnt |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_100 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_rvalid |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_101 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_rvalid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.load_valid_o
+    user_defined_poi_1_prop_102 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_rvalid |=> ex_stage_i__load_valid_o));
+  //ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_103 : assert property ((ex_stage_i__dcache_req_ports_i_1___data_rvalid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_104 : assert property ((ex_stage_i__dcache_req_ports_i_2___data_gnt |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_105 : assert property ((ex_stage_i__dcache_req_ports_i_2___data_gnt |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_106 : assert property ((ex_stage_i__dcache_req_ports_i_2___data_gnt |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.flu_valid_o |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_107 : assert property ((ex_stage_i__flu_valid_o |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.icache_areq_i.fetch_req |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_108 : assert property ((ex_stage_i__icache_areq_i__fetch_req |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.is_compressed_instr_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_109 : assert property ((ex_stage_i__is_compressed_instr_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.is_compressed_instr_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_110 : assert property ((ex_stage_i__is_compressed_instr_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.load_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_111 : assert property ((ex_stage_i__load_valid_o |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.load_valid_o |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_112 : assert property ((ex_stage_i__load_valid_o |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.load_valid_o |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_113 : assert property ((ex_stage_i__load_valid_o |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_commit_i |=> ex_stage_i.dcache_req_ports_i[2].data_gnt
+    user_defined_poi_1_prop_114 : assert property ((ex_stage_i__lsu_commit_i |=> ex_stage_i__dcache_req_ports_i_2___data_gnt));
+  //ex_stage_i.lsu_commit_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_115 : assert property ((ex_stage_i__lsu_commit_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_commit_i |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_116 : assert property ((ex_stage_i__lsu_commit_i |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_commit_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_117 : assert property ((ex_stage_i__lsu_commit_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_commit_i |=> ex_stage_i.icache_areq_i.fetch_req
+    user_defined_poi_1_prop_118 : assert property ((ex_stage_i__lsu_commit_i |=> ex_stage_i__icache_areq_i__fetch_req));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_119 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_0_ |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_120 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_0_ |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_121 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_0_ |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.lsu_commit_i
+    user_defined_poi_1_prop_122 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_0_ |=> ex_stage_i__lsu_commit_i));
+  //ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_123 : assert property ((ex_stage_i__lsu_i__i_store_unit__state_q_0_ |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_124 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_125 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]
+    user_defined_poi_1_prop_126 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]
+    user_defined_poi_1_prop_127 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_128 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_129 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_130 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]
+    user_defined_poi_1_prop_131 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]
+    user_defined_poi_1_prop_132 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_133 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_134 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_135 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]
+    user_defined_poi_1_prop_136 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]
+    user_defined_poi_1_prop_137 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]
+    user_defined_poi_1_prop_138 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]
+    user_defined_poi_1_prop_139 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_140 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_141 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_142 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_143 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt
+    user_defined_poi_1_prop_144 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__dcache_req_ports_i_2___data_gnt));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_145 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_146 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_147 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.icache_areq_i.fetch_req
+    user_defined_poi_1_prop_148 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__icache_areq_i__fetch_req));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid
+    user_defined_poi_1_prop_149 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]
+    user_defined_poi_1_prop_150 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]
+    user_defined_poi_1_prop_151 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt
+    user_defined_poi_1_prop_152 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__dcache_req_ports_i_2___data_gnt));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_153 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_154 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_155 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.icache_areq_i.fetch_req
+    user_defined_poi_1_prop_156 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__icache_areq_i__fetch_req));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid
+    user_defined_poi_1_prop_157 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]
+    user_defined_poi_1_prop_158 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]
+    user_defined_poi_1_prop_159 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt
+    user_defined_poi_1_prop_160 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__dcache_req_ports_i_2___data_gnt));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_161 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_162 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_163 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.icache_areq_i.fetch_req
+    user_defined_poi_1_prop_164 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__icache_areq_i__fetch_req));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid
+    user_defined_poi_1_prop_165 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]
+    user_defined_poi_1_prop_166 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]
+    user_defined_poi_1_prop_167 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]
+    user_defined_poi_1_prop_168 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]
+    user_defined_poi_1_prop_169 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt
+    user_defined_poi_1_prop_170 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__dcache_req_ports_i_2___data_gnt));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_171 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_172 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_173 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.icache_areq_i.fetch_req
+    user_defined_poi_1_prop_174 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__icache_areq_i__fetch_req));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid
+    user_defined_poi_1_prop_175 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0] |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]
+    user_defined_poi_1_prop_176 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_ |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1] |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]
+    user_defined_poi_1_prop_177 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_ |=> ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_));
+  //ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_178 : assert property ((ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_179 : assert property ((ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_180 : assert property ((ex_stage_i__lsu_valid_i |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.lsu_valid_i |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_181 : assert property ((ex_stage_i__lsu_valid_i |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_valid_i |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_182 : assert property ((ex_stage_i__lsu_valid_i |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.lsu_valid_i |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_183 : assert property ((ex_stage_i__lsu_valid_i |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.resolve_branch_o |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_184 : assert property ((ex_stage_i__resolve_branch_o |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.resolve_branch_o |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_185 : assert property ((ex_stage_i__resolve_branch_o |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_186 : assert property ((ex_stage_i__resolved_branch_o__is_mispredict |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_187 : assert property ((ex_stage_i__resolved_branch_o__is_taken |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_188 : assert property ((ex_stage_i__resolved_branch_o__is_taken |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.store_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i
+    user_defined_poi_1_prop_189 : assert property ((ex_stage_i__store_valid_o |=> ex_stage_i__dcache_wbuffer_empty_i));
+  //ex_stage_i.store_valid_o |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_190 : assert property ((ex_stage_i__store_valid_o |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.store_valid_o |=> ex_stage_i.flu_ready_o
+    user_defined_poi_1_prop_191 : assert property ((ex_stage_i__store_valid_o |=> ex_stage_i__flu_ready_o));
+  //ex_stage_i.store_valid_o |=> ex_stage_i.lsu_commit_i
+    user_defined_poi_1_prop_192 : assert property ((ex_stage_i__store_valid_o |=> ex_stage_i__lsu_commit_i));
+  //ex_stage_i.store_valid_o |=> ex_stage_i.no_st_pending_o
+    user_defined_poi_1_prop_193 : assert property ((ex_stage_i__store_valid_o |=> ex_stage_i__no_st_pending_o));
+  //ex_stage_i.debug_mode_i |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_194 : assert property ((ex_stage_i__debug_mode_i |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q
+    user_defined_poi_1_prop_195 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid |=> ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q
+    user_defined_poi_1_prop_196 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid |=> ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q
+    user_defined_poi_1_prop_197 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q
+    user_defined_poi_1_prop_198 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid |=> ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0] |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_199 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_ |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1] |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_200 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_ |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0] |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_201 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_ |=> ex_stage_i__debug_mode_i));
+  //ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1] |=> ex_stage_i.debug_mode_i
+    user_defined_poi_1_prop_202 : assert property ((ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_ |=> ex_stage_i__debug_mode_i));
+
+
+endmodule
+
+`ifndef JASPER_SVA_NO_BIND
+module sva_bind();
+    bind ariane bps_sva_1 bps_sva_1_i (
+        .clk_i(clk_i),
+        .ex_stage_i__alu_valid_i(ex_stage_i.alu_valid_i),
+        .ex_stage_i__branch_valid_i(ex_stage_i.branch_valid_i),
+        .ex_stage_i__csr_buffer_i__csr_reg_q__valid(ex_stage_i.csr_buffer_i.csr_reg_q.valid),
+        .ex_stage_i__csr_commit_i(ex_stage_i.csr_commit_i),
+        .ex_stage_i__csr_valid_i(ex_stage_i.csr_valid_i),
+        .ex_stage_i__dcache_req_ports_i_1___data_gnt(ex_stage_i.dcache_req_ports_i[1].data_gnt),
+        .ex_stage_i__dcache_req_ports_i_1___data_rvalid(ex_stage_i.dcache_req_ports_i[1].data_rvalid),
+        .ex_stage_i__dcache_req_ports_i_2___data_gnt(ex_stage_i.dcache_req_ports_i[2].data_gnt),
+        .ex_stage_i__dcache_wbuffer_empty_i(ex_stage_i.dcache_wbuffer_empty_i),
+        .ex_stage_i__debug_mode_i(ex_stage_i.debug_mode_i),
+        .ex_stage_i__flu_ready_o(ex_stage_i.flu_ready_o),
+        .ex_stage_i__flu_valid_o(ex_stage_i.flu_valid_o),
+        .ex_stage_i__flush_i(ex_stage_i.flush_i),
+        .ex_stage_i__fpu_valid_i(ex_stage_i.fpu_valid_i),
+        .ex_stage_i__fpu_valid_o(ex_stage_i.fpu_valid_o),
+        .ex_stage_i__i_mult__i_div__div_res_zero_q(ex_stage_i.i_mult.i_div.div_res_zero_q),
+        .ex_stage_i__i_mult__i_div__rem_sel_q(ex_stage_i.i_mult.i_div.rem_sel_q),
+        .ex_stage_i__i_mult__i_div__state_q_0_(ex_stage_i.i_mult.i_div.state_q[0]),
+        .ex_stage_i__i_mult__i_multiplier__mult_valid_o(ex_stage_i.i_mult.i_multiplier.mult_valid_o),
+        .ex_stage_i__i_mult__mul_valid(ex_stage_i.i_mult.mul_valid),
+        .ex_stage_i__i_mult__word_op_q(ex_stage_i.i_mult.word_op_q),
+        .ex_stage_i__icache_areq_i__fetch_req(ex_stage_i.icache_areq_i.fetch_req),
+        .ex_stage_i__is_compressed_instr_i(ex_stage_i.is_compressed_instr_i),
+        .ex_stage_i__load_valid_o(ex_stage_i.load_valid_o),
+        .ex_stage_i__lsu_commit_i(ex_stage_i.lsu_commit_i),
+        .ex_stage_i__lsu_commit_ready_o(ex_stage_i.lsu_commit_ready_o),
+        .ex_stage_i__lsu_i__i_store_unit__state_q_0_(ex_stage_i.lsu_i.i_store_unit.state_q[0]),
+        .ex_stage_i__lsu_i__i_store_unit__state_q_1_(ex_stage_i.lsu_i.i_store_unit.state_q[1]),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_0___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_1___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_2___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__commit_queue_q_3___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_0___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_1___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_2___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_queue_q_3___valid(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_0_(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_read_pointer_q_1_(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_0_(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]),
+        .ex_stage_i__lsu_i__i_store_unit__store_buffer_i__speculative_write_pointer_q_1_(ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]),
+        .ex_stage_i__lsu_i__lsu_bypass_i__mem_q_0___valid(ex_stage_i.lsu_i.lsu_bypass_i.mem_q[0].valid),
+        .ex_stage_i__lsu_i__lsu_bypass_i__mem_q_1___valid(ex_stage_i.lsu_i.lsu_bypass_i.mem_q[1].valid),
+        .ex_stage_i__lsu_i__lsu_bypass_i__read_pointer_q(ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q),
+        .ex_stage_i__lsu_i__lsu_bypass_i__status_cnt_q_1_(ex_stage_i.lsu_i.lsu_bypass_i.status_cnt_q[1]),
+        .ex_stage_i__lsu_i__lsu_bypass_i__write_pointer_q(ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q),
+        .ex_stage_i__lsu_ready_o(ex_stage_i.lsu_ready_o),
+        .ex_stage_i__lsu_valid_i(ex_stage_i.lsu_valid_i),
+        .ex_stage_i__mult_valid_i(ex_stage_i.mult_valid_i),
+        .ex_stage_i__no_st_pending_o(ex_stage_i.no_st_pending_o),
+        .ex_stage_i__resolve_branch_o(ex_stage_i.resolve_branch_o),
+        .ex_stage_i__resolved_branch_o__is_mispredict(ex_stage_i.resolved_branch_o.is_mispredict),
+        .ex_stage_i__resolved_branch_o__is_taken(ex_stage_i.resolved_branch_o.is_taken),
+        .ex_stage_i__store_valid_o(ex_stage_i.store_valid_o)
+);
+endmodule
+`endif
+

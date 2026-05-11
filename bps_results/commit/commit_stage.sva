@@ -1,0 +1,189 @@
+// ----------------------------------------
+// Jasper Version Info
+// tool      : Jasper 2026.03
+// platform  : Linux 4.18.0-553.123.1.el8_10.x86_64
+// version   : 2026.03 FCS 64 bits
+// build date: 2026.03.26 12:48:29 UTC
+// ----------------------------------------
+// started   : 2026-05-10 22:18:08 EDT
+// created   : 2026-05-10 22:28:27 EDT
+// hostname  : node1-s.ece.Virginia.EDU.UVAECE
+// pid       : 3643259
+// arguments : '-label' 'session_0' '-console' '//127.0.0.1:46825' '-style' 'windows' '-data' 'AAABC3icVY5dCsIwEIS/CIL44Bm8QP0pWHzoJRTfS5FSKmpKG5/1qN4kTlqoZJPM7kxmNwHMsMnf3nuGMN8xkxviCHwWK6dPlGH+vwzlioQnloKaF42UhRTHlbvqtbLlodVIK+iFpZwVm8mzlL+lk+8mdhaW8rXydOqwmurEAvZsSdnpZMIDe+FFLFV1VJ1pUqL+eppX6Q03fvYHKKEg/w==' '-bridge_url' '10.230.53.157:38257' '-proj' '/net/marysrock.ece.Virginia.EDU/maryisan/users/brg8ve/cva6_verif/jasper_outputs/20260510T221806--jgproject/sessionLogs/session_0' '-init' '-hidden' '/net/marysrock.ece.Virginia.EDU/maryisan/users/brg8ve/cva6_verif/jasper_outputs/20260510T221806--jgproject/.tmp/.initCmds.tcl' 'commit_stage.tcl'
+// ----------------------------------------
+//
+// Any disclosure about the Cadence Design Systems software or its use
+// model to any third party violates the written Non-Disclosure Agreement
+// between Cadence Design Systems, Inc. and the customer.
+//
+// THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+// CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+// PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+// DESIGN SYSTEMS, INC.
+//
+// Copyright (C) 2000-2026 Cadence Design Systems, Inc. All Rights
+// Reserved.  Unpublished -- rights reserved under the copyright laws of
+// the United States.
+//
+// This product includes software developed by others and redistributed
+// according to license agreement. See doc/third_party_readme.txt for
+// further details.
+//
+// RESTRICTED RIGHTS LEGEND
+//
+// Use, duplication, or disclosure by the Government is subject to
+// restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+// Technical Data and Computer Software clause at DFARS 252.227-7013 or
+// subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+// Rights at 48 CFR 52.227-19, as applicable.
+//
+//
+//                           Cadence Design Systems, Inc.
+//                           2655 Seely Avenue
+//                           San Jose, CA 95134
+//                           Phone: 408.943.1234
+//
+// For technical assistance visit http://support.cadence.com.
+
+//------------------------------------------
+// bps_sva_1: 
+//------------------------------------------
+module bps_sva_1 (
+    input wire clk_i,
+    input wire commit_stage_i__commit_ack_o_1_,
+    input wire commit_stage_i__commit_instr_i_0___ex__valid,
+    input wire commit_stage_i__commit_instr_i_0___is_compressed,
+    input wire commit_stage_i__commit_instr_i_0___use_imm,
+    input wire commit_stage_i__commit_instr_i_0___use_pc,
+    input wire commit_stage_i__commit_instr_i_1___ex__valid,
+    input wire commit_stage_i__commit_instr_i_1___is_compressed,
+    input wire commit_stage_i__commit_instr_i_1___use_imm,
+    input wire commit_stage_i__commit_instr_i_1___use_pc,
+    input wire commit_stage_i__commit_instr_i_1___valid,
+    input wire commit_stage_i__commit_lsu_ready_i,
+    input wire commit_stage_i__csr_write_fflags_o,
+    input wire commit_stage_i__dirty_fp_state_o,
+    input wire commit_stage_i__exception_o__valid,
+    input wire commit_stage_i__fence_i_o,
+    input wire commit_stage_i__fence_o,
+    input wire commit_stage_i__no_st_pending_i,
+    input wire commit_stage_i__we_fpr_o_0_,
+    input wire commit_stage_i__we_gpr_o_1_
+);
+
+
+  default clocking def_clk @(posedge clk_i);
+  endclocking
+
+
+  //commit_stage_i.commit_instr_i[0].ex.valid |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_1 : assert property ((commit_stage_i__commit_instr_i_0___ex__valid |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.commit_instr_i[0].ex.valid |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_2 : assert property ((commit_stage_i__commit_instr_i_0___ex__valid |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[0].use_pc |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_3 : assert property ((commit_stage_i__commit_instr_i_0___use_pc |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.commit_instr_i[1].ex.valid |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_4 : assert property ((commit_stage_i__commit_instr_i_1___ex__valid |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.commit_instr_i[1].ex.valid |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_5 : assert property ((commit_stage_i__commit_instr_i_1___ex__valid |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.commit_instr_i[1].ex.valid |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_6 : assert property ((commit_stage_i__commit_instr_i_1___ex__valid |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[1].use_pc |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_7 : assert property ((commit_stage_i__commit_instr_i_1___use_pc |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.csr_write_fflags_o |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_8 : assert property ((commit_stage_i__csr_write_fflags_o |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.csr_write_fflags_o |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_9 : assert property ((commit_stage_i__csr_write_fflags_o |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.dirty_fp_state_o |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_10 : assert property ((commit_stage_i__dirty_fp_state_o |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.dirty_fp_state_o |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_11 : assert property ((commit_stage_i__dirty_fp_state_o |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.exception_o.valid |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_12 : assert property ((commit_stage_i__exception_o__valid |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.exception_o.valid |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_13 : assert property ((commit_stage_i__exception_o__valid |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.fence_i_o |=> commit_stage_i.commit_instr_i[0].use_imm
+    user_defined_poi_1_prop_14 : assert property ((commit_stage_i__fence_i_o |=> commit_stage_i__commit_instr_i_0___use_imm));
+  //commit_stage_i.fence_i_o |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_15 : assert property ((commit_stage_i__fence_i_o |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.fence_i_o |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_16 : assert property ((commit_stage_i__fence_i_o |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.fence_i_o |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_17 : assert property ((commit_stage_i__fence_i_o |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.fence_o |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_18 : assert property ((commit_stage_i__fence_o |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.fence_o |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_19 : assert property ((commit_stage_i__fence_o |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.no_st_pending_i |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_20 : assert property ((commit_stage_i__no_st_pending_i |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.we_fpr_o[0] |=> commit_stage_i.commit_lsu_ready_i
+    user_defined_poi_1_prop_21 : assert property ((commit_stage_i__we_fpr_o_0_ |=> commit_stage_i__commit_lsu_ready_i));
+  //commit_stage_i.we_fpr_o[0] |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_22 : assert property ((commit_stage_i__we_fpr_o_0_ |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_ack_o[1] |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_23 : assert property ((commit_stage_i__commit_ack_o_1_ |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.commit_ack_o[1] |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_24 : assert property ((commit_stage_i__commit_ack_o_1_ |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[0].is_compressed |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_25 : assert property ((commit_stage_i__commit_instr_i_0___is_compressed |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[0].use_pc |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_26 : assert property ((commit_stage_i__commit_instr_i_0___use_pc |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[1].is_compressed |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_27 : assert property ((commit_stage_i__commit_instr_i_1___is_compressed |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[1].use_pc |=> commit_stage_i.commit_instr_i[0].use_imm
+    user_defined_poi_1_prop_28 : assert property ((commit_stage_i__commit_instr_i_1___use_pc |=> commit_stage_i__commit_instr_i_0___use_imm));
+  //commit_stage_i.commit_instr_i[1].use_pc |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_29 : assert property ((commit_stage_i__commit_instr_i_1___use_pc |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.commit_instr_i[1].use_pc |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_30 : assert property ((commit_stage_i__commit_instr_i_1___use_pc |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[1].valid |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_31 : assert property ((commit_stage_i__commit_instr_i_1___valid |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.commit_instr_i[1].valid |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_32 : assert property ((commit_stage_i__commit_instr_i_1___valid |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.fence_o |=> commit_stage_i.commit_instr_i[0].use_imm
+    user_defined_poi_1_prop_33 : assert property ((commit_stage_i__fence_o |=> commit_stage_i__commit_instr_i_0___use_imm));
+  //commit_stage_i.fence_o |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_34 : assert property ((commit_stage_i__fence_o |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.we_gpr_o[1] |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_35 : assert property ((commit_stage_i__we_gpr_o_1_ |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.we_gpr_o[1] |=> commit_stage_i.no_st_pending_i
+    user_defined_poi_1_prop_36 : assert property ((commit_stage_i__we_gpr_o_1_ |=> commit_stage_i__no_st_pending_i));
+  //commit_stage_i.commit_instr_i[0].ex.valid |=> commit_stage_i.commit_instr_i[0].use_imm
+    user_defined_poi_1_prop_37 : assert property ((commit_stage_i__commit_instr_i_0___ex__valid |=> commit_stage_i__commit_instr_i_0___use_imm));
+  //commit_stage_i.commit_instr_i[0].ex.valid |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_38 : assert property ((commit_stage_i__commit_instr_i_0___ex__valid |=> commit_stage_i__commit_instr_i_1___use_imm));
+  //commit_stage_i.exception_o.valid |=> commit_stage_i.commit_instr_i[0].use_imm
+    user_defined_poi_1_prop_39 : assert property ((commit_stage_i__exception_o__valid |=> commit_stage_i__commit_instr_i_0___use_imm));
+  //commit_stage_i.exception_o.valid |=> commit_stage_i.commit_instr_i[1].use_imm
+    user_defined_poi_1_prop_40 : assert property ((commit_stage_i__exception_o__valid |=> commit_stage_i__commit_instr_i_1___use_imm));
+
+
+endmodule
+
+`ifndef JASPER_SVA_NO_BIND
+module sva_bind();
+    bind ariane bps_sva_1 bps_sva_1_i (
+        .clk_i(clk_i),
+        .commit_stage_i__commit_ack_o_1_(commit_stage_i.commit_ack_o[1]),
+        .commit_stage_i__commit_instr_i_0___ex__valid(commit_stage_i.commit_instr_i[0].ex.valid),
+        .commit_stage_i__commit_instr_i_0___is_compressed(commit_stage_i.commit_instr_i[0].is_compressed),
+        .commit_stage_i__commit_instr_i_0___use_imm(commit_stage_i.commit_instr_i[0].use_imm),
+        .commit_stage_i__commit_instr_i_0___use_pc(commit_stage_i.commit_instr_i[0].use_pc),
+        .commit_stage_i__commit_instr_i_1___ex__valid(commit_stage_i.commit_instr_i[1].ex.valid),
+        .commit_stage_i__commit_instr_i_1___is_compressed(commit_stage_i.commit_instr_i[1].is_compressed),
+        .commit_stage_i__commit_instr_i_1___use_imm(commit_stage_i.commit_instr_i[1].use_imm),
+        .commit_stage_i__commit_instr_i_1___use_pc(commit_stage_i.commit_instr_i[1].use_pc),
+        .commit_stage_i__commit_instr_i_1___valid(commit_stage_i.commit_instr_i[1].valid),
+        .commit_stage_i__commit_lsu_ready_i(commit_stage_i.commit_lsu_ready_i),
+        .commit_stage_i__csr_write_fflags_o(commit_stage_i.csr_write_fflags_o),
+        .commit_stage_i__dirty_fp_state_o(commit_stage_i.dirty_fp_state_o),
+        .commit_stage_i__exception_o__valid(commit_stage_i.exception_o.valid),
+        .commit_stage_i__fence_i_o(commit_stage_i.fence_i_o),
+        .commit_stage_i__fence_o(commit_stage_i.fence_o),
+        .commit_stage_i__no_st_pending_i(commit_stage_i.no_st_pending_i),
+        .commit_stage_i__we_fpr_o_0_(commit_stage_i.we_fpr_o[0]),
+        .commit_stage_i__we_gpr_o_1_(commit_stage_i.we_gpr_o[1])
+);
+endmodule
+`endif
+
