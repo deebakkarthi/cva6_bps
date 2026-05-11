@@ -1,0 +1,288 @@
+<!--
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2026.03
+# platform  : Linux 4.18.0-553.123.1.el8_10.x86_64
+# version   : 2026.03 FCS 64 bits
+# build date: 2026.03.26 12:48:29 UTC
+# ----------------------------------------
+# started   : 2026-05-11 17:50:18 EDT
+# created   : 2026-05-11 18:06:13 EDT
+# hostname  : node1-s.ece.Virginia.EDU.UVAECE
+# pid       : 503157
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:33025' '-style' 'windows' '-data' 'AAABDXicVY5NCsIwEIW/CoK48BDuq1WwbnoJxX0ppRRFbGgjuNOjepP4kkIlk8y8+XlvEiAJl+LtnCNY8h2RIiE2X8/izukTIcz/Q5+uSHnQUdLy5KrOQh1LzV35moaXvNbMCksGYSVuw2ZiLaUw9NpyU3VWrMQz4vRSdEFrQhzYsieT54oHdjoX+VF5Jsy1KZW+nfb5t+343R95pSFt' '-bridge_url' '10.230.53.157:41135' '-proj' '/net/marysrock.ece.Virginia.EDU/maryisan/users/brg8ve/cva6_verif/jasper_outputs/20260511T175016--jgproject/sessionLogs/session_0' '-init' '-hidden' '/net/marysrock.ece.Virginia.EDU/maryisan/users/brg8ve/cva6_verif/jasper_outputs/20260511T175016--jgproject/.tmp/.initCmds.tcl' 'execute_stage.tcl'
+# ----------------------------------------
+#
+# Any disclosure about the Cadence Design Systems software or its use
+# model to any third party violates the written Non-Disclosure Agreement
+# between Cadence Design Systems, Inc. and the customer.
+#
+# THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+# CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+# PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+# DESIGN SYSTEMS, INC.
+#
+# Copyright (C) 2000-2026 Cadence Design Systems, Inc. All Rights
+# Reserved.  Unpublished -- rights reserved under the copyright laws of
+# the United States.
+#
+# This product includes software developed by others and redistributed
+# according to license agreement. See doc/third_party_readme.txt for
+# further details.
+#
+# RESTRICTED RIGHTS LEGEND
+#
+# Use, duplication, or disclosure by the Government is subject to
+# restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+# Technical Data and Computer Software clause at DFARS 252.227-7013 or
+# subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+# Rights at 48 CFR 52.227-19, as applicable.
+#
+#
+#                           Cadence Design Systems, Inc.
+#                           2655 Seely Avenue
+#                           San Jose, CA 95134
+#                           Phone: 408.943.1234
+#
+# For technical assistance visit http://support.cadence.com.
+-->
+
+<html>
+<head><title>Jasper&reg Apps Behavioral Property SynthesisReport</title></head>
+<body>
+<h1 style="color: #000000; background-color: #FFFFFF; margin: 0px; text-align: center;adding-bottom: 8px;margin: 0 0 10px;border-bottom: 3px solid #e31837;padding-bottom: 8px;" ><img src=/app7/cadence/jasper/current/common/src/gui/images/icons/cadenceLogo-200.png align=left width="103" height="39"/>Jasper&reg Apps Behavioral Property SynthesisReport </h1>
+<h3 style="color: #000000; background-color: #F0F0F0; font-size: medium; font-weight: normal; margin: 0px; text-align: center" >
+<table align="center" cellpadding="4" width="100%" style="text-align: center">
+<tr><td>module: <i>ariane</i></td><td>create date: <i>May 11 18:06:13 EDT 2026</i></td><td>filter: <i>class in ( unclassified ) and rank = high  and type in ( assert ) and progress state in ( new, hole, covered, covered_now_hole, assert, violated, certified_hole, certified_assert )</i></td></tr>
+</table></h3>
+<br />
+<h4 style="margin: 3px">DESIGN INFORMATION SUMMARY: </h4>
+<table align="center" border="0" rules="none" cellpadding="2" width="60%" style="font-size: small">
+<tr><td>Flops</td><td>1668 (22383) (0 property flop bits)</td><td>RTL Lines</td><td>23908</td></tr>
+<tr><td>Latches</td><td>7 (256)</td><td>RTL Instances</td><td>233</td></tr>
+<tr><td>Gates</td><td>46994 (422353)</td><td>Embedded Assumptions</td><td>0</td></tr>
+<tr><td>Nets</td><td>50153</td><td>Embedded Assertions</td><td>0</td></tr>
+<tr><td>Ports</td><td>10</td><td>Embedded Covers</td><td>0</td></tr>
+</table>
+<br />
+<h4 style="margin: 3px">PROPERTY SYNTHESIS SUMMARY: </h4>
+<table align="center" border="1" cellpadding="2" rules="all" style="font-size: small" width="60%">
+<tr style="background-color: #DCDCDC"><th>POI Type</th><th>Number of POIs</th><th>Exercised Behaviors</th><th>Coverage Holes</th></tr>
+<tr><td><A HREF='#user_defined'>User-defined</td><td align=right>1</td><td align=right>202</td><td align=right>0</td></tr>
+</table><br /><hr /><br />
+<table align="center" rules="all" cellpadding="2" border="1" width="80%" style="font-size: small" >
+<tr><td colspan="6" style="background-color: #DCDCDC" id=user_defined><strong>User-defined</strong></td></tr>
+<tr><th>POI#</th><th colspan="4">Signals</th><th>Critical Values</th></tr>
+<tr><th width="5%">&nbsp;</th><th width="10%">Classification</th><th width="10%">Type</th><th width="10%">Status</th><th width="50%">Property</th><th width="15%">&nbsp;</th>
+<tr><th rowspan="203" align="center">1</th><td colspan="4">ex_stage_i.alu_valid_i , ex_stage_i.amo_resp_i.ack , ex_stage_i.amo_valid_commit_i , ex_stage_i.branch_valid_i , ex_stage_i.csr_buffer_i.csr_reg_q.valid , ex_stage_i.csr_commit_i , ex_stage_i.csr_valid_i , ex_stage_i.dcache_req_ports_i[0].data_gnt , ex_stage_i.dcache_req_ports_i[0].data_rvalid ,  ... </td><td>&nbsp;</td></tr><tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.alu_valid_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.branch_valid_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.branch_valid_i |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_valid_i |=> ex_stage_i.csr_buffer_i.csr_reg_q.valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_wbuffer_empty_i |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.debug_mode_i |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.debug_mode_i |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.flush_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>proven</td><td colspan="2"style="font-style: italic ">ex_stage_i.flush_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.flush_i |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>proven</td><td colspan="2"style="font-style: italic ">ex_stage_i.flush_i |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.flush_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_i |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_i |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_o |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_o |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_o |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.fpu_valid_o |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.div_res_zero_q |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.div_res_zero_q |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.rem_sel_q |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.rem_sel_q |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_div.state_q[0] |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.i_mult.word_op_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.is_compressed_instr_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.i_multiplier.mult_valid_o |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.i_mult.word_op_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.is_compressed_instr_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.mul_valid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.word_op_q |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.word_op_q |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.i_mult.word_op_q |=> ex_stage_i.i_mult.word_op_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.load_valid_o |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.load_valid_o |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.i_mult.word_op_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.mem_q[0].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.mem_q[1].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.status_cnt_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[1] |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.flu_valid_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.i_mult.i_div.div_res_zero_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.i_mult.i_div.rem_sel_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.lsu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.mult_valid_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>proven</td><td colspan="2"style="font-style: italic ">ex_stage_i.no_st_pending_o |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolve_branch_o |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolve_branch_o |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.lsu_commit_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.alu_valid_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.branch_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.branch_valid_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_buffer_i.csr_reg_q.valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_buffer_i.csr_reg_q.valid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_commit_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_commit_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_valid_i |=> ex_stage_i.csr_commit_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.csr_valid_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_gnt |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.load_valid_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[1].data_rvalid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.dcache_req_ports_i[2].data_gnt |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.flu_valid_o |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.icache_areq_i.fetch_req |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.is_compressed_instr_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.is_compressed_instr_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.load_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.load_valid_o |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.load_valid_o |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_commit_i |=> ex_stage_i.dcache_req_ports_i[2].data_gnt</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_commit_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_commit_i |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_commit_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_commit_i |=> ex_stage_i.icache_areq_i.fetch_req</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.lsu_commit_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.state_q[0] |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.icache_areq_i.fetch_req</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[0].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[0].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.icache_areq_i.fetch_req</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[1].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[1].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.icache_areq_i.fetch_req</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[2].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[2].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.dcache_req_ports_i[2].data_gnt</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.icache_areq_i.fetch_req</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0] |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1] |=> ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1]</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_valid_i |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_valid_i |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_valid_i |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_valid_i |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolve_branch_o |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolve_branch_o |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_mispredict |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.resolved_branch_o.is_taken |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.store_valid_o |=> ex_stage_i.dcache_wbuffer_empty_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.store_valid_o |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.store_valid_o |=> ex_stage_i.flu_ready_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.store_valid_o |=> ex_stage_i.lsu_commit_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.store_valid_o |=> ex_stage_i.no_st_pending_o</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.debug_mode_i |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.commit_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.read_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_queue_q[3].valid |=> ex_stage_i.lsu_i.lsu_bypass_i.write_pointer_q</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[0] |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_read_pointer_q[1] |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[0] |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td>unclassified</td><td>assert</td><td>cex</td><td colspan="2"style="font-style: italic ">ex_stage_i.lsu_i.i_store_unit.store_buffer_i.speculative_write_pointer_q[1] |=> ex_stage_i.debug_mode_i</td></tr>
+<tr><td colspan="6" align="center">--</td></tr>
+</table>
+<br />
+<h3 style="color: #000000; background-color: #F0F0F0; font-size: medium; font-weight: normal; margin: 0px; text-align: center" >
+<table align="center" cellpadding="4" width="100%" style="text-align: center">
+<tr><td>module: <i>ariane</i></td><td>create date: <i>May 11 18:06:13 EDT 2026</i></td><td>filter: <i>class in ( unclassified ) and rank = high  and type in ( assert ) and progress state in ( new, hole, covered, covered_now_hole, assert, violated, certified_hole, certified_assert )</i></td></tr>
+</table></h3>
+<h1 style="color: #000000; background-color: #FFFFFF; font-size: medium; margin: 0px; text-align: center" >[Jasper 2026.03] [Platform Linux64] [Version 2026.03 FCS 64 bits] [Build date 2026.03.26 12:48:29 UTC] </h1>
+</body>
+</html>
